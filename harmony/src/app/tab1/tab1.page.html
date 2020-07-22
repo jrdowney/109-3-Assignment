@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Message Feed
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="tertiary" [fullscreen]="true">
+
+  <div class="post" *ngFor="let p of allPosts"> 
+
+    <ion-img src="{{p.imageUrl}}" alt="userPost.img"></ion-img>
+
+    <div class="info">
+
+      <label class="user">{{p.from}}: &nbsp;</label>
+      <div >
+      <h6 class="message">{{p.text}}</h6>
+      </div> 
+    </div>
+
+  </div>
+
+
+
+</ion-content>
